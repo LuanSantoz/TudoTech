@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css" media="all">
+	@charset "UTF-8";
+	
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+		color: white;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+	
+	a:hover {
+		opacity: 0.7;
+		background: rgba(0, 0, 0, .05);
+	}
+	
+	header {
+		box-sizing: border-box;
+		background-image: linear-gradient(to top, #43aaa7, lightblue);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4vh;
+		padding: 5px 20px;
+	}
+	
+	
+	#nav-list {
+		display: flex;
+		gap: .9rem;
+		list-style: none;
+	}
+	
+	#menu-mobile {
+		display: none;
+	}
+	
+	@media (max-width: 600px) {
+		#menu-mobile {
+			display: block;
+			color: white;
+		}
+		
+		#nav-list {
+			display: none;
+		}
+		
+		#menu.active #nav-list {
+			display: flex;
+		}
+	}
+	
+	#logo {
+		font: bold 24px Verdana;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+  </style>
+  <script src="js/index.js"></script>
+  <title>TechTudo</title>
+</head>
+<body>
+	<header>
+		<nav id="menu">
+			<button id="menu-mobile">Menu</button>
+			<ul id="nav-list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Notícias</a></li>
+				<li><a href="#">Categorias</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</nav>
+		<a id="logo" href="/">TudoTech</a>
+	</header>
+	<main></main>
+</body>
+</html>
